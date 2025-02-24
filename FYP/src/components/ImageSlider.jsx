@@ -6,7 +6,7 @@ import img4 from "../assets/pexles4.jpg";
 import left from "../assets/left.png";
 import right from "../assets/right.png";
 
-const images = [img, img2, img3, img4];
+const images = [img4, img2, img3, img];
 
 function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
