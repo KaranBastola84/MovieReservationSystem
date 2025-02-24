@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import ImageSlider from "../components/ImageSlider";
 
 const Landing = () => {
-  const [selectedDate, setSelectedDate] = useState("today");
+  const [selectedDate, setSelectedDate] = useState("today");git remote add origin https://github.com/KaranBastola84/SYP.git
 
   // Sample data for movies
   const movies = [
