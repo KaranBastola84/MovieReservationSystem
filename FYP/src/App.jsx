@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Landing from "./pages/landing";
+import Landing from "./pages/Landing";
 import AboutUs from "./pages/AboutUs";
 import TermsAndCondition from "./pages/TermsAndCondition";
 import TicketRate from "./pages/TicketRate";
@@ -17,6 +17,7 @@ export default function App() {
         <Route path="/SignIn" element={<SignIn />} />
       </Routes>
     </Router>
+
     </>
   );
 }

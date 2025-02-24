@@ -15,10 +15,11 @@ function TicketRate() {
             <div className="bg-red-600 text-white font-bold p-2 text-center">
               Morning Show (Sunday - Saturday)
             </div>
-            <div className="flex justify-between items-center p-4 bg-white">
-              <div>Before 10:00 AM</div>
+            <div className="grid grid-cols-2 text-center p-4 bg-white">
+              <div className="font-semibold">Audi 1</div>
+              <div className="font-semibold">Audi 2</div>
               <div>NPR 185*</div>
-              <div>Opening Soon</div>
+              <div className="text-red-500">Opening Soon</div>
             </div>
           </div>
 
@@ -27,13 +28,14 @@ function TicketRate() {
             <div className="bg-red-600 text-white font-bold p-2 text-center">
               Deal Day (Tuesday & Wednesday)
             </div>
-            <div className="flex justify-between items-center p-4 bg-white">
-              <div>All Timings</div>
+            <div className="grid grid-cols-2 text-center p-4 bg-white">
+              <div className="font-semibold">Audi 1</div>
+              <div className="font-semibold">Audi 2</div>
               <div>NPR 185*</div>
-              <div>Opening Soon</div>
+              <div className="text-red-500">Opening Soon</div>
             </div>
-            <p className="text-xs text-gray-500 mt-2">
-              This rate is not applicable for New Releases in the first week.*
+            <p className="text-xs text-gray-500 mt-2 px-4">
+              * This rate is not applicable for New Releases in the first week.
             </p>
           </div>
 
@@ -42,21 +44,22 @@ function TicketRate() {
             <div className="bg-red-600 text-white font-bold p-2 text-center">
               Weekly Ticket Rates
             </div>
-            <div className="flex justify-between items-center p-4 bg-white">
+            <div className="grid grid-cols-3 text-center p-4 bg-white">
+              <div className="font-semibold">Movie Type</div>
+              <div className="font-semibold">Audi 1</div>
+              <div className="font-semibold">Audi 2</div>
               <div>English / Hindi Movies</div>
               <div>NPR 350*</div>
-              <div>Opening Soon</div>
-            </div>
-            <div className="flex justify-between items-center p-4 bg-white border-t">
-              <div>Nepali Movies</div>
-              <div>NPR 300*</div>
-              <div>Opening Soon</div>
+              <div className="text-red-500">Opening Soon</div>
+              <div>Only Nepali Movies</div>
+              <div>NPR 350*</div>
+              <div className="text-red-500">Opening Soon</div>
             </div>
           </div>
 
           {/* Note */}
-          <div className="bg-gray-300 p-2 rounded-lg text-xs text-gray-700 mt-4">
-            <p>Note: 3D Extra Charge will be added NPR 50*</p>
+          <div className="bg-gray-300 p-3 rounded-lg text-xs text-gray-700 mt-4">
+            <p><strong>Note:</strong> 3D Extra Charge will be added NPR 50*</p>
             <p>Tickets are applicable for ages 3 years / 3 feet and above.</p>
           </div>
         </div>

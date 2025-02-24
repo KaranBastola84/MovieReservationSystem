@@ -1,52 +1,53 @@
-import React, { useState } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import React, { useState } from "react";
+import img from "../assets/pexels1.jpg";
+import img2 from "../assets/pexels2.jpg";
+import img3 from "../assets/pexels3.jpg";
+import img4 from "../assets/pexles4.jpg";
+import left from "../assets/left.png";
+import right from "../assets/right.png";
 
-const images = [
-    '/images/pexels1.jpg',
-    '/images/pexels2.jpg',
-    '/images/pexels3.jpg',
-    '/images/pexels4.jpg',
-];
+const images = [img, img2, img3, img4];
 
-const ImageSlider = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+function ImageSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const showSlide = (index) => {
-        if (index < 0) {
-            setCurrentIndex(images.length - 1);
-        } else if (index >= images.length) {
-            setCurrentIndex(0);
-        } else {
-            setCurrentIndex(index);
-        }
-    };
-
-    return (
-        <div className="relative w-full h-96 mt-5 overflow-hidden">
-            {images.map((img, index) => (
-                <div
-                    key={index}
-                    className={`absolute inset-0 transition-opacity duration-500 ${
-                        index === currentIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
-                >
-                    <img src={img} alt={`Slide ${index}`} className="w-full h-full object-cover bg-black" />
-                </div>
-            ))}
-            <button
-                onClick={() => showSlide(currentIndex - 1)}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white p-3 rounded-full"
-            >
-                <FaArrowLeft />
-            </button>
-            <button
-                onClick={() => showSlide(currentIndex + 1)}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white p-3 rounded-full"
-            >
-                <FaArrowRight />
-            </button>
-        </div>
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
-};
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center mt-5 mb-5 relative">
+      <div className="w-[1100px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative">
+        <img
+          src={images[currentIndex]}
+          alt="slider"
+          className="w-full h-full object-cover transition-transform duration-500"
+        />
+
+        <button
+          onClick={prevImage}
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-slate-300 bg-opacity-80 p-2 rounded-full hover:bg-opacity-65 transition-all duration-300"
+        >
+          <img src={left} alt="" />
+        </button>
+
+        <button
+          onClick={nextImage}
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-slate-300 bg-opacity-80 p-2 rounded-full hover:bg-opacity-65 transition-all duration-300"
+        >
+          <img src={right} alt="" />
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export default ImageSlider;

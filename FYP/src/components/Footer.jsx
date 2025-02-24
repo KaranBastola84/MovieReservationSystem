@@ -67,10 +67,8 @@ function Footer() {
           </div>
           <div className="flex flex-col items-center md:items-start space-y-2">
             <h4 className="text-lg font-semibold ml-7">Payment Partner</h4>
-            <a href="/">
-              <img src={Khalti} alt="Khalti" className="h-[100px]" />
-            </a>
-          </div>
+            <img src={Khalti} alt="Khalti" className="h-[100px]" />
+            </div>
         </div>
       </footer> 
     </>
