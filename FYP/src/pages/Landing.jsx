@@ -20,7 +20,7 @@ function Landing() {
             NOW <br /> SHOWING
           </h2>
         </div>
-        <div className="show-time gap-16 flex">
+        <div className="show-time gap-10 flex">
           <button
             className={`h-12 w-20 mt-1 rounded-full border-2 ${
               selectedDay === "today"
