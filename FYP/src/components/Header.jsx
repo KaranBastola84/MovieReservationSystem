@@ -15,17 +15,17 @@ function Header() {
             <a href="/" className="hover:text-red-600 ">
               Home
             </a>
-            <a href="/" className="hover:text-red-600">
+            <a href="/MoviesColl" className="hover:text-red-600">
               Movie
             </a>
-            <a href="TicketRate" className="hover:text-red-600">
+            <a href="/TicketRate" className="hover:text-red-600">
               Ticket Rate
             </a>
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="SignIn"
+              href="/SignIn"
               className="px-6 py-1 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-600"
             >
               Login

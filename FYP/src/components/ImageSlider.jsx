@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import img from "../assets/pexels1.jpg";
-import img2 from "../assets/pexels2.jpg";
 import img3 from "../assets/pexels3.jpg";
-import img4 from "../assets/pexles4.jpg";
 import left from "../assets/left.png";
 import right from "../assets/right.png";
 
-const images = [img4, img2, img3, img];
+const images = [img, img3];
 
 function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,9 +21,18 @@ function ImageSlider() {
     );
   };
 
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [currentIndex]); // Re-run effect when currentIndex changes
+
   return (
     <div className="flex flex-col items-center justify-center mt-5 mb-5 relative">
-      <div className="w-[1100px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative">
+      <div className="w-[1200px] h-[510px] overflow-hidden rounded-2xl shadow-xl relative">
         <img
           src={images[currentIndex]}
           alt="slider"
